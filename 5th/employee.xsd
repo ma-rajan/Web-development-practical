@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="TU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Employee" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+               <!-- Post: 5 to 8 characters  -->
+              <xs:element name="Post">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="5"/>
+                    <xs:maxLength value="8"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+               <!-- Salary: 15000 - 25000  -->
+              <xs:element name="Salary">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="15000"/>
+                    <xs:maxInclusive value="25000"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+               <!-- Gender: fixed values  -->
+              <xs:element name="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="male"/>
+                    <xs:enumeration value="female"/>
+                    <xs:enumeration value="other"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Username: minimum 8 characters  -->
+              <xs:element name="Username">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="8"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Password: start with letter & min 8 characters  -->
+              <xs:element name="Password">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="8"/>
+                    <xs:pattern value="[A-Za-z].*"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

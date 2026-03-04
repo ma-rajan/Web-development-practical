@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE TU [
+    <!ELEMENT TU (Employee+)>
+
+    <!ELEMENT Employee (Post, Salary, Gender, Username, Password)>
+
+    <!ELEMENT Post (#PCDATA)>
+    <!ELEMENT Salary (#PCDATA)>
+    <!ELEMENT Gender (#PCDATA)>
+    <!ELEMENT Username (#PCDATA)>
+    <!ELEMENT Password (#PCDATA)>
+]>
+
+<TU>
+    
+    <Employee>
+        <Post>Accountant</Post>
+        <Salary>45000</Salary>
+        <Gender>Female</Gender>
+        <Username>Ranjana</Username>
+        <Password>Ranjana1234</Password>
+    </Employee>
+
+    <Employee>
+        <Post>Lab Assistant</Post>
+        <Salary>25000</Salary>
+        <Gender>Female</Gender>
+        <Username>Mikasa</Username>
+        <Password>Mikasa481</Password>
+    </Employee>
+
+    <Employee>
+        <Post>Security Guard</Post>
+        <Salary>25000</Salary>
+        <Gender>Male</Gender>
+        <Username>Mohan</Username>
+        <Password>Mohan124</Password>
+    </Employee>
+</TU>
